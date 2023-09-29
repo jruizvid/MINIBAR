@@ -1,2 +1,2 @@
 # miniBASIS
-Tools to calculate minimal Lagrangians explicitly
+Tools to calculate minimal Lagrangians explicitly with Mathematica
