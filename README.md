@@ -4,7 +4,7 @@ Tools to calculate minimal Lagrangians explicitly with Mathematica
 
 version 0.0: October 2nd, 2023
 
-Author: Joan Ruiz-Vidal
+Author: Joan Ruiz-Vidal (Lund U.)
 
 ## Description
 
@@ -15,8 +15,8 @@ These tools have been developed for the case of Chiral Perturbation Theory (ChPT
 ## Acknowledgements
 
 The underlying algorithms and structure of the calculation has been shaped in collaboration with 
- - Johan Bijnens (Lund University)
- - Nils Hermansson-Truedsson (Lund University; Edinburgh University) 
+ - Johan Bijnens (Lund U.)
+ - Nils Hermansson-Truedsson (Lund U.; Edinburgh U.) 
 
 Both of them posses extensive expertise in these type of analyses [[1810.06834](https://arxiv.org/abs/1810.06834), [hep-ph/0110400](https://arxiv.org/abs/hep-ph/0110400), [hep-ph/9902437](https://arxiv.org/abs/hep-ph/9902437)] and conducted independent calculations of this Lagrangian with a different software.
 
