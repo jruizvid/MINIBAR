@@ -2,7 +2,7 @@
 
 Tools to calculate minimal Lagrangians explicitly with Mathematica
 
-version 0: 2 - oct - 2023
+version 0.0: October 2nd, 2023
 
 Author: Joan Ruiz-Vidal
 
