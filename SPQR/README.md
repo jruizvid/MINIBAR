@@ -32,13 +32,15 @@ It is recommended to obtain the relation matrix before configuring SuiteSparse. 
     sudo make install
  ```
  
- - 3. Include cholmod libraries in LD_LIBRARY_PATH: Add to ~.bashrc,
+ - 3. Include libraries in LD_LIBRARY_PATH: Add to ~/.bashrc,
 
  ```
-    export LD_LIBRARY_PATH="user/path/SuiteSparse-7.0.1/CHOLMOD/build/":$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH="/user/path/SuiteSparse-7.0.1/CHOLMOD/build/":$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH="/user/path/SuiteSparse-7.0.1/SPQR/build:$LD_LIBRARY_PATH"
     export LD_LIBRARY_PATH="/user/path/SuiteSparse-7.0.1/lib:$LD_LIBRARY_PATH"
  ```
 
+(>>bash and restart Mathematica)
 
 ### TEST SuiteSparse C++ implementation
 

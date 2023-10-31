@@ -1,5 +1,5 @@
-tmp/*.txt
-tmp/*.mtx
-#save/
+Examples/tmp/
+Examples/tmp/
+Examples/save/
 
 OFFICIAL_REPO.txt

@@ -1,0 +1,207 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8382,        199]
+NotebookOptionsPosition[      7587,        177]
+NotebookOutlinePosition[      7990,        193]
+CellTagsIndexPosition[      7947,        190]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"$Path", ",", " ", 
+    RowBox[{"NotebookDirectory", "[", "]"}]}], "]"}], ";"}], "\n", 
+ RowBox[{"Needs", "[", "\"\<MINIBAR`\>\"", "]"}]}], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"9ad14505-6b43-4204-be78-1ac70deff3d3"],
+
+Cell[CellGroupData[{
+
+Cell["WELCOME TO THE MINIBAR !", "Section",
+ CellChangeTimes->{{3.907729999326661*^9, 
+  3.907730004677127*^9}},ExpressionUUID->"10082eda-7239-479f-b7c3-\
+3c6791bbb150"],
+
+Cell[TextData[{
+ "The MINIBAR is like a cozy kitchen for enthusiasts of symmetry invariant \
+structures.\n\nThe MINIBAR is not like a fancy restaurant where you order \
+from a limited menu of symmetries and get served a tasty Lagrangian. Here you \
+have to compose your own meal with a range of provisions, and the \
+combinations are virtually limitless!\n\nIf you are allergic to some \
+identities that do not hold in your case, that\[CloseCurlyQuote]s ok! In the \
+MINIBAR you can always read the list of ingredients and compose the ",
+ StyleBox["operator relations",
+  FontWeight->"Bold"],
+ " to your liking with ",
+ StyleBox["getRelationsFromRule. ",
+  FontSlant->"Italic"],
+ "All dietary choices have a space in the MINIBAR, and we don\
+\[CloseCurlyQuote]t judge!\n\nBest of all, the tools in this kitchen have \
+been specially optimized for its ",
+ StyleBox["fast execution",
+  FontWeight->"Bold"],
+ ". For example, if you brewed a set of replacement rules, wrap them with ",
+ StyleBox["rulesToFunction",
+  FontSlant->"Italic"],
+ " and pour them all at once! Or if you got a humongous number of operator \
+relations, above 100k or more, use ",
+ StyleBox["getMinimalBasis",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["find your independent monomials",
+  FontWeight->"Bold"],
+ " in under 10s! To go even faster, it is a good idea to organize your \
+ingredients before starting to cook: ",
+ StyleBox["symmetrize",
+  FontSlant->"Italic"],
+ " your operators and get rid of those nasty odd terms under the ",
+ StyleBox["symmetry transformations",
+  FontWeight->"Bold"],
+ " of your choice.\n\nBut this is only a tasting, the back of this fridge is \
+packed with functions. For example: if you like more bitter operators in you \
+final basis, define ",
+ StyleBox["scorePreferredOperators",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["getMinimalBasis",
+  FontSlant->"Italic"],
+ " will do as best as possible to please your taste; if instead you did not \
+get picky but your result does not look like it should, ",
+ StyleBox["testEquivalenceBases",
+  FontSlant->"Italic"],
+ " and leave no doubt",
+ StyleBox[".",
+  FontSlant->"Italic"],
+ " If you don\[CloseCurlyQuote]t like to waste your RAM, not everything in \
+life are operator relations!",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "To rapidly account for trivial relations, ",
+ StyleBox["generateAlternativeShapes ",
+  FontSlant->"Italic"],
+ "of your operators and ",
+ StyleBox["getDictionaryOfShapes",
+  FontSlant->"Italic"],
+ " to ",
+ StyleBox["reshapeTerms ",
+  FontSlant->"Italic"],
+ "any time you need. \n\nAll the functions mentioned so far are ",
+ StyleBox["flexible for different notations",
+  FontWeight->"Bold"],
+ ", but if your operators are composed of (products of) traces and the \
+matrices only carry one type of index... Congratulations! You can compose \
+your initial invariants seamlessly: just define your building blocks ",
+ StyleBox["BB ",
+  FontSlant->"Italic"],
+ "to ",
+ StyleBox["getCombinationsWithSymmetries",
+  FontSlant->"Italic"],
+ ", and then simply ",
+ StyleBox["introduceTraces",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["insertIndices! \n\n",
+  FontSlant->"Italic"],
+ "Now you know what kind of things are offered here. If it seems appealing, \
+feel free to wonder around the examples and don\[CloseCurlyQuote]t be afraid \
+to ?ask Mathematica what the functions do. If you get no answer, these are \
+probably user-defined functions: go to the Examples > Configuration and check \
+the source code for yourself."
+}], "Text",
+ CellChangeTimes->{{3.9077299033479433`*^9, 3.907729905044017*^9}, {
+   3.907730017037039*^9, 3.907730018373864*^9}, {3.9077301715060053`*^9, 
+   3.907730399526681*^9}, {3.907730435031342*^9, 3.90773077244077*^9}, {
+   3.907730834905529*^9, 3.9077308377367268`*^9}, {3.90773086839367*^9, 
+   3.907730989002454*^9}, {3.9077310204955072`*^9, 3.907731112586685*^9}, {
+   3.907731163275223*^9, 3.907731314643585*^9}, {3.9077314456203413`*^9, 
+   3.907731450819955*^9}, 3.90773151898106*^9, {3.907731627453703*^9, 
+   3.907731729749937*^9}, {3.907731824430956*^9, 3.907731864158658*^9}, {
+   3.907731935335162*^9, 3.907732050903262*^9}, {3.907732081367482*^9, 
+   3.90773210475149*^9}, {3.907732143464238*^9, 3.907732258751975*^9}, {
+   3.907732364289446*^9, 3.90773242024146*^9}, 3.907732569466549*^9, 
+   3.907732641171372*^9, {3.9077326859709387`*^9, 3.907732716178623*^9}, {
+   3.907732785411408*^9, 3.9077328147155733`*^9}, 3.907732933051443*^9, {
+   3.907733045284709*^9, 3.9077331015965233`*^9}, {3.907733201949544*^9, 
+   3.907733429325981*^9}, {3.9077334613899918`*^9, 3.907733464382024*^9}, {
+   3.907733531358684*^9, 3.907733713671554*^9}, {3.907733762320455*^9, 
+   3.90773376320028*^9}, {3.9077338218644943`*^9, 3.907734029208807*^9}, {
+   3.907734065386375*^9, 3.9077340694981213`*^9}, {3.9077341124347153`*^9, 
+   3.907734120682096*^9}, 3.907734249706572*^9, {3.907734384651167*^9, 
+   3.9077344738835773`*^9}, {3.907734521947454*^9, 3.907734619908409*^9}, {
+   3.907734657484857*^9, 3.907734909157506*^9}, {3.907734945718732*^9, 
+   3.907734945878336*^9}, {3.9077349959351997`*^9, 3.9077350429425793`*^9}, {
+   3.907735123663323*^9, 3.907735250840103*^9}, {3.9077353136485662`*^9, 
+   3.907735332520598*^9}, {3.907735378344124*^9, 3.907735412705041*^9}, {
+   3.90773569548277*^9, 3.907735752550859*^9}, {3.907735804162573*^9, 
+   3.907735898571203*^9}, {3.907735939307897*^9, 3.907736022516*^9}, {
+   3.907736585030469*^9, 3.907736610614586*^9}, 3.907736765151321*^9, {
+   3.90773683858346*^9, 3.907737051816588*^9}, {3.907737336644006*^9, 
+   3.907737369425201*^9}, {3.9077406647306023`*^9, 3.907740669256922*^9}, {
+   3.90774072672184*^9, 
+   3.907740754195369*^9}},ExpressionUUID->"b83d4d7a-1e62-4f27-b6e6-\
+6b0489f20708"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorial", "Section",
+ CellChangeTimes->{{3.9077367898865423`*^9, 3.907736825727027*^9}, {
+  3.907737502442326*^9, 
+  3.907737505514392*^9}},ExpressionUUID->"e7ecb4f0-492a-4846-83b7-\
+e7fc57466b00"],
+
+Cell[TextData[{
+ "A basic tutorial is underway...\nFor the moment, you can strip the examples \
+setting ORDER = 6 and ",
+ StyleBox["//see",
+  FontSlant->"Italic"],
+ " what is cooking behind the scenes. Don\[CloseCurlyQuote]t forget that most \
+of the functions are documented, just ?ask Mathematica."
+}], "Text",
+ CellChangeTimes->{{3.907737511570325*^9, 3.9077376482427597`*^9}, {
+  3.907737723595149*^9, 3.907737747802884*^9}, {3.907740794722796*^9, 
+  3.907740795538732*^9}},ExpressionUUID->"b9b0431f-9875-4990-a45e-\
+29e50a9c2cdd"]
+}, Open  ]]
+},
+WindowSize->{751.5, 996.75},
+WindowMargins->{{222.75, Automatic}, {7.5, Automatic}},
+FrontEndVersion->"13.0 for Linux x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"99b46a5a-7e89-4988-9bd9-6c1ce45ed5da"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 290, 6, 51, "Input",ExpressionUUID->"9ad14505-6b43-4204-be78-1ac70deff3d3"],
+Cell[CellGroupData[{
+Cell[873, 30, 169, 3, 68, "Section",ExpressionUUID->"10082eda-7239-479f-b7c3-3c6791bbb150"],
+Cell[1045, 35, 5747, 117, 771, "Text",ExpressionUUID->"b83d4d7a-1e62-4f27-b6e6-6b0489f20708"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6829, 157, 204, 4, 68, "Section",ExpressionUUID->"e7ecb4f0-492a-4846-83b7-e7fc57466b00"],
+Cell[7036, 163, 535, 11, 81, "Text",ExpressionUUID->"b9b0431f-9875-4990-a45e-29e50a9c2cdd"]
+}, Open  ]]
+}
+]
+*)
+
