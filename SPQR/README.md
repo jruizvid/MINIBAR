@@ -1,10 +1,10 @@
-# Dependencies of miniBASIS
+# Dependencies of MINIBAR
 
 ## SuiteSparse 
 
-The external software SuiteSparseQR, within [SuiteSparse](https://github.com/DrTimothyAldenDavis/SuiteSparse), is used in part of miniBASIS to decompose the sparse matrices containing the relations between different monomials in the Lagrangian. It is written in C++. Below you can find some recommendations for its installation.
+The external software SuiteSparseQR, within [SuiteSparse](https://github.com/DrTimothyAldenDavis/SuiteSparse), is used in part of MINIBAR to decompose the sparse matrices containing the relations between different monomials in the Lagrangian. It is written in C++. Below you can find some recommendations for its installation.
 
-This is needed to run the Examples in version 0. For other calculations with miniBASIS, this dependency may not be essential. In particular, one can find the corresponding functions written in Mathematica of
+This is needed to run the Examples in version 0. For other calculations with MINIBAR, this dependency may not be essential. In particular, one can find the corresponding functions written in Mathematica of
  - getRank, as getRankMathematica.
  - getMinimalBasis, as (future) getMinimalBasisMathematica;
 
@@ -50,7 +50,7 @@ It is recommended to obtain the relation matrix before configuring SuiteSparse. 
     g++ rankQR.cpp -lcholmod -lspqr -lsuitesparseconfig -o tmp; ./tmp matrices/matBig.mtx 
  ```
  
-### TEST SuiteSparse in miniBASIS
+### TEST SuiteSparse in MINIBAR
 
 Use function getMinimalBasis and getRank. But probably you want to advance in your computation before deciding if you need this 
 
